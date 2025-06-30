@@ -33,16 +33,25 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
+
     /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
      */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
+//    protected function casts(): array
+//    {
+//        return [
+//            'email_verified_at' => 'datetime',
+//            'password' => 'hashed',
+//        ];
+//    }
+
+
+
 }
