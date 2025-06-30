@@ -11,3 +11,4 @@ Route::get('/user', function (Request $request) {
 
 Route::get('/books', [BookController::class, 'index']);
 Route::get('/books/{id}', [BookController::class, 'show']);
+Route::delete('/books/{id}', [BookController::class, 'destroy']);
