@@ -38,6 +38,11 @@ class User extends Authenticatable
         return $this->morphOne(Image::class, 'imageable');
     }
 
+    public function reviews()
+    {
+        return $this->morphMany(Review::class, 'reviewable');
+    }
+
 
     /**
      * Get the attributes that should be cast.

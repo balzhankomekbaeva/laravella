@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\City;
+use App\Models\Review;
 use App\Models\Student;
 use App\Models\Teacher;
 use App\Models\User;
@@ -12,9 +14,7 @@ class TestController extends Controller
 {
     public function testRelations()
     {
-        $user = User::first();
-        $image = $user->image;
-        dd($image->url);
-
+        $article = Article::first();
+        dd($article->oldestReview);
     }
 }
