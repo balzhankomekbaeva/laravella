@@ -42,6 +42,10 @@ class User extends Authenticatable
     {
         return $this->morphMany(Review::class, 'reviewable');
     }
+    public function tags()
+    {
+        return $this->morphtoMany(Tag::class, 'taggable');
+    }
 
 
     /**

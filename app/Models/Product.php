@@ -10,4 +10,9 @@ class Product extends Model
     {
         return $this->morphOne(Image::class, 'imageable');
     }
+
+    public function tags()
+    {
+        return $this->morphtoMany(Tag::class, 'taggable');
+    }
 }
